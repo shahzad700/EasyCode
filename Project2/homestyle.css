@@ -1,0 +1,348 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.navbar-brand{
+    height: 100px;
+    font-family: "Lobster", sans-serif;;
+}
+
+.navbar-nav {
+    text-align: center;
+    justify-content: center;
+    flex-grow: 2;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+    font-size: 20px;
+    font-family: "New Amsterdam", sans-serif;
+
+}
+
+.navbar-nav .nav-link:hover {
+    color: gold;
+    background-color: black;
+}
+
+.dropdown-menu {
+    background-color: #f8f9fa;
+}
+
+.dropdown-item:hover {
+    background-color: black;
+    color: gold;
+}
+
+.search-bar {
+    flex-grow: 1;
+}
+
+.form-control {
+    border-radius: 20px;
+}
+
+.fa-star {
+    color: #ffd700;
+}
+
+h6{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h6:hover{
+    color: #ffcc00;
+}
+
+.cart-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #163942;
+    color: white;
+    min-width: 250px;
+    border: 1px solid #ddd;
+    z-index: 1000;
+}
+
+.btn1{
+    background-color: gold;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn1:hover{
+    color: gold;
+    background-color: black;
+}
+
+.cart-dropdown.show {
+    display: block;
+}
+
+.icon-btn {
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.icon-btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.banner {
+    background: url('images/Beige Brown Abstract Modern Coffee Shop Banner.jpg') no-repeat center center;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Container for products */
+.products {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Lobster", sans-serif;
+    text-decoration: underline;
+}
+
+/* Product Card Styles */
+.product-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    margin: 20px 10px;
+}
+
+.product-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Hover Effect */
+.btn-hover {
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s, background-color 0.4s, border-color 0.4s;
+    width: 100%;
+    margin-top: auto;
+}
+
+.btn-hover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.75s ease-in-out;
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 0;
+}
+
+.btn-hover:hover::before {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-hover:hover {
+    color: #fff;
+    background-color: #28a745;
+    border-color: black;
+}
+
+/* Flying Cart Animation */
+.flying-cart {
+    width: 50px;
+    /* Adjust size as needed */
+    height: 50px;
+    border-radius: 50%;
+    /* Optional: make it round */
+    object-fit: cover;
+    transition: all 0.6s ease-in-out;
+    z-index: 1000;
+}
+
+.reviews{
+    font-family: "Lobster", sans-serif;
+    text-decoration: underline;
+}
+
+
+/* Review Card Styles */
+.review-card {
+    height: 350px;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin: 0 auto;
+}
+
+.review-card:hover {
+    transform: scale(1.05);
+    background-color: #e0ffe0;
+}
+
+.review-card:active {
+    background-color: #d1f1d1;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    color: black;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.rating {
+    margin-top: 10px;
+}
+
+.text-warning {
+    color: #ffcc00;
+}
+
+
+
+/* Footer Styles */
+.footer {
+    background: #f8f8f8;
+    padding: 20px;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 1rem;
+}
+
+.footer .box h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.footer .links {
+    display: block;
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+.footer .links i {
+    color: #28a745;
+    padding-right: 0.5rem;
+}
+
+.footer .links:hover i {
+    padding-right: 1rem;
+}
+
+.footer .share a {
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #333;
+    margin-right: 0.5rem;
+    background: #eee;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.footer .share a:hover {
+    background: #28a745;
+    color: #fff;
+}
+
+.footer .payment-img {
+    margin-top: 1rem;
+    height: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .products {
+        padding: 10px;
+    }
+
+    .product-card,
+    .review-card {
+        height: auto;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .footer .box-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Add this CSS to make the sections scrollable */
+#products, #reviews, #footer {
+    scroll-margin-top: 70px; /* adjust this value to match the height of your navbar */
+}
+
